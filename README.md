@@ -60,6 +60,9 @@ npm start
 
 To test the echo API after you publish your discovery manifest, go to the bottom of https://developers.erasmuswithoutpaper.eu/ and choose your host from the echo dropdown list.
 
+## Documentation
+The project documentaion can be found [here]( https://auth-it-center.github.io/ewp-interconnect/).
+
 ## Built With
 
 * [NodeJS](https://nodejs.org/en/) - Runtime Engine
