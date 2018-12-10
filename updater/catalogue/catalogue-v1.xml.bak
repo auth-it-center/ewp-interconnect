@@ -1,0 +1,3321 @@
+<catalogue
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:d4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+    xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:r1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:sec-D1="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-ounits/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iia-cnr/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>usos@usos.edu.pl</ewp:admin-email>
+        <ewp:admin-notes>This host handles the EWP Registry Service.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://dev-registry.erasmuswithoutpaper.eu/manifest.xml</d5:url>
+            </d5:discovery>
+            <r1:registry version="1.3.0">
+                <r1:catalogue-url>https://dev-registry.erasmuswithoutpaper.eu/catalogue-v1.xml</r1:catalogue-url>
+            </r1:registry>
+        </apis-implemented>
+    </host>
+    <host>
+        <ewp:admin-email>usos@usos.edu.pl</ewp:admin-email>
+        <ewp:admin-notes>This host is needed for the Echo API Validator.</ewp:admin-notes>
+        <apis-implemented>
+            <fake-api-without-a-version xmlns="https://github.com/erasmus-without-paper/ewp-registry-service/issues/8"/>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>hei01.developers.erasmuswithoutpaper.eu</hei-id>
+            <hei-id>hei02.developers.erasmuswithoutpaper.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9b869bac319fbd86bab695c1e0d04433fcc300edbc72c4f29e5aeaf8ae8f5a33"/>
+            <rsa-public-key sha-256="6a4f57df7f4d2cc6684570e09be16a1ca67975205ff77063162a6976b51c6c95"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="32e5776456bec2be7d760080a802b4a37033f1771d5900f86c6b3e5e9c41f1ac"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>hostmaster@usos.edu.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.demo.usos.edu.pl/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.demo.usos.edu.pl/ewp/echo</e2:url>
+            </e2:echo>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp.demo.usos.edu.pl/ewp/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp.demo.usos.edu.pl/ewp/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.demo.usos.edu.pl/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.demo.usos.edu.pl/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp.demo.usos.edu.pl/ewp/iia/get</ia2:get-url>
+                <ia2:max-iia-ids>100</ia2:max-iia-ids>
+                <ia2:max-iia-codes>100</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp.demo.usos.edu.pl/ewp/iia/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp.demo.usos.edu.pl/ewp/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp.demo.usos.edu.pl/ewp/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp.demo.usos.edu.pl/ewp/omobilities/index</om1:index-url>
+                <om1:update-url>https://ewp.demo.usos.edu.pl/ewp/omobilities/update</om1:update-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp.demo.usos.edu.pl/ewp/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://ewp.demo.usos.edu.pl/ewp/courses</c1:url>
+                <c1:max-los-ids>100</c1:max-los-ids>
+                <c1:max-los-codes>100</c1:max-los-codes>
+            </c1:courses>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp.demo.usos.edu.pl/ewp/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp.demo.usos.edu.pl/ewp/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewp.demo.usos.edu.pl/ewp/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>demo.usos.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="cab65151f11bee053d3f8627e77b47c215ea5a384681224adf6d34abc8abfd27"/>
+            <rsa-public-key sha-256="1bb29154c18bd6feac90998dc22a13c1ebb8b6b8d9c9d2ffe72458c880ca8039"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="1bb29154c18bd6feac90998dc22a13c1ebb8b6b8d9c9d2ffe72458c880ca8039"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>hostmaster@usos.edu.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-hei.demo.usos.edu.pl/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-hei.demo.usos.edu.pl/ewp/echo</e2:url>
+            </e2:echo>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp-hei.demo.usos.edu.pl/ewp/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-hei.demo.usos.edu.pl/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-hei.demo.usos.edu.pl/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/get</ia2:get-url>
+                <ia2:max-iia-ids>100</ia2:max-iia-ids>
+                <ia2:max-iia-codes>100</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp-hei.demo.usos.edu.pl/ewp/omobilities/index</om1:index-url>
+                <om1:update-url>https://ewp-hei.demo.usos.edu.pl/ewp/omobilities/update</om1:update-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp-hei.demo.usos.edu.pl/ewp/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://ewp-hei.demo.usos.edu.pl/ewp/courses</c1:url>
+                <c1:max-los-ids>100</c1:max-los-ids>
+                <c1:max-los-codes>100</c1:max-los-codes>
+            </c1:courses>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp-hei.demo.usos.edu.pl/ewp/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewp-hei.demo.usos.edu.pl/ewp/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>hei.demo.usos.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="6ef671479a23e2171b65c120c1b8e323edef839b9245734ca3e1d0044bdd47f5"/>
+            <rsa-public-key sha-256="b3b3e4660f9373070162692bb9775474e1f9ba8ebf04d897ed8bfa7224484db8"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b3b3e4660f9373070162692bb9775474e1f9ba8ebf04d897ed8bfa7224484db8"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
+        <apis-implemented>
+            <d4:discovery version="4.0.0">
+                <d4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/UPF_HOST.xml</d4:url>
+            </d4:discovery>
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <e1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e1:url>
+            </e1:echo>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
+            >
+                <om1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/get</om1:get-url>
+                <om1:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/index</om1:index-url>
+                <om1:update-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/update</om1:update-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+            <ia2:iias version="2.0.0">
+                <ia2:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/index</ia2:index-url>
+            </ia2:iias>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses</c1:url>
+                <c1:max-los-ids>1</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/get</imt1:get-url>
+                <imt1:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/index</imt1:index-url>
+                <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
+            </imt1:imobility-tors>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uc3m.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="10107262c9dc18954bec87472be29ab1cca544f90c001e94d04ed5b9c622677d"/>
+            <certificate sha-256="2b455719a3577f473c7e2c2f24a8da78428ce7230a3992a564f9007c453af0f6"/>
+            <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <d5:url>https://www.service4mobility.com/europe_test/ewp/manifest?api=all</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://www.service4mobility.com/europe_test/ewp/echo</e2:url>
+            </e2:echo>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+            <hei-id>turkuamk.fi</hei-id>
+            <hei-id>diak.fi</hei-id>
+            <hei-id>jyu.fi</hei-id>
+            <hei-id>ub.edu</hei-id>
+            <hei-id>tut.fi</hei-id>
+            <hei-id>fontys.edu</hei-id>
+            <hei-id>uni-kiel.de</hei-id>
+            <hei-id>uni-augsburg.de</hei-id>
+            <hei-id>fh-dortmund.de</hei-id>
+            <hei-id>kea.dk</hei-id>
+            <hei-id>htw-berlin.de</hei-id>
+            <hei-id>uta.fi</hei-id>
+            <hei-id>hogent.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://www.service4mobility.com/europe_test/ewp/institutions</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+            <hei-id>turkuamk.fi</hei-id>
+            <hei-id>diak.fi</hei-id>
+            <hei-id>jyu.fi</hei-id>
+            <hei-id>ub.edu</hei-id>
+            <hei-id>tut.fi</hei-id>
+            <hei-id>fontys.edu</hei-id>
+            <hei-id>uni-kiel.de</hei-id>
+            <hei-id>uni-augsburg.de</hei-id>
+            <hei-id>fh-dortmund.de</hei-id>
+            <hei-id>kea.dk</hei-id>
+            <hei-id>htw-berlin.de</hei-id>
+            <hei-id>uta.fi</hei-id>
+            <hei-id>hogent.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ou2:organizational-units version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://www.service4mobility.com/europe_test/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+            <hei-id>turkuamk.fi</hei-id>
+            <hei-id>diak.fi</hei-id>
+            <hei-id>ub.edu</hei-id>
+            <hei-id>tut.fi</hei-id>
+            <hei-id>fontys.edu</hei-id>
+            <hei-id>uni-kiel.de</hei-id>
+            <hei-id>uni-augsburg.de</hei-id>
+            <hei-id>fh-dortmund.de</hei-id>
+            <hei-id>kea.dk</hei-id>
+            <hei-id>uta.fi</hei-id>
+            <hei-id>hogent.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://www.service4mobility.com/europe_test/ewp/courses</c1:url>
+                <c1:max-los-ids>50</c1:max-los-ids>
+                <c1:max-los-codes>50</c1:max-los-codes>
+            </c1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://www.service4mobility.com/europe_test/ewp/courserep</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ia2:iias version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://www.service4mobility.com/europe_test/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://www.service4mobility.com/europe_test/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <iac2:iia-cnr version="2.0.2">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/europe_test/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://www.service4mobility.com/europe_test/ewp/mobility_out/get</om1:get-url>
+                <om1:index-url>https://www.service4mobility.com/europe_test/ewp/mobility_out/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://www.service4mobility.com/europe_test/ewp/mobility_out/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://www.service4mobility.com/europe_test/ewp/mobility_in/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://www.service4mobility.com/europe_test/ewp/mobility_in/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-bremen.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <d5:url>https://www.service4mobility.com/mobility_test/ewp/manifest?api=all</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://www.service4mobility.com/mobility_test/ewp/echo</e2:url>
+            </e2:echo>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://www.service4mobility.com/mobility_test/ewp/institutions</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ou2:organizational-units version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://www.service4mobility.com/mobility_test/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://www.service4mobility.com/mobility_test/ewp/courses</c1:url>
+                <c1:max-los-ids>50</c1:max-los-ids>
+                <c1:max-los-codes>50</c1:max-los-codes>
+            </c1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://www.service4mobility.com/mobility_test/ewp/courserep</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ia2:iias version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://www.service4mobility.com/mobility_test/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://www.service4mobility.com/mobility_test/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <iac2:iia-cnr version="2.0.2">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/mobility_test/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://www.service4mobility.com/mobility_test/ewp/mobility_out/get</om1:get-url>
+                <om1:index-url>https://www.service4mobility.com/mobility_test/ewp/mobility_out/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://www.service4mobility.com/mobility_test/ewp/mobility_out/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://www.service4mobility.com/mobility_test/ewp/mobility_in/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://www.service4mobility.com/mobility_test/ewp/mobility_in/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ph-ooe.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <d5:url>https://www.service4mobility.com/mobility_demo/ewp/manifest?api=all</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://www.service4mobility.com/mobility_demo/ewp/echo</e2:url>
+            </e2:echo>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://www.service4mobility.com/mobility_demo/ewp/institutions</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ou2:organizational-units version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://www.service4mobility.com/mobility_demo/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://www.service4mobility.com/mobility_demo/ewp/courses</c1:url>
+                <c1:max-los-ids>50</c1:max-los-ids>
+                <c1:max-los-codes>50</c1:max-los-codes>
+            </c1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://www.service4mobility.com/mobility_demo/ewp/courserep</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <ia2:iias version="2.1.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://www.service4mobility.com/mobility_demo/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://www.service4mobility.com/mobility_demo/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <iac2:iia-cnr version="2.0.2">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/mobility_demo/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://www.service4mobility.com/mobility_demo/ewp/mobility_out/get</om1:get-url>
+                <om1:index-url>https://www.service4mobility.com/mobility_demo/ewp/mobility_out/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://www.service4mobility.com/mobility_demo/ewp/mobility_out/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://www.service4mobility.com/mobility_demo/ewp/mobility_in/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://www.service4mobility.com/mobility_demo/ewp/mobility_in/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>partner.sop.co.at</hei-id>
+            <hei-id>demo.sop.co.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="be6642ad332dba450cf14e1cf18a53d2909758183c0a7621962c5eb6e64737f7"/>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
+        <apis-implemented>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:url>https://ewp.its.umu.se/ewp-reference-connector/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://ewp.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
+            </d4:discovery>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imc1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imtc1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/imobilities/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>1</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.0"
+            >
+                <omc1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.its.umu.se/ewp-reference-connector/rest/echo</e2:url>
+            </e2:echo>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/courses/replication</cr1:url>
+                <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>false</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:get-url>https://ewp.its.umu.se/ewp-reference-connector/rest/imobilities/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp.its.umu.se/ewp-reference-connector/rest/imobilities/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://ewp.its.umu.se/ewp-reference-connector/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <im1:get-url>https://ewp.its.umu.se/ewp-reference-connector/rest/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/courses</c1:url>
+                <c1:max-los-ids>2</c1:max-los-ids>
+                <c1:max-los-codes>2</c1:max-los-codes>
+            </c1:courses>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:url>https://ewp.its.umu.se/ewp-reference-connector/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
+            >
+                <om1:get-url>https://ewp.its.umu.se/ewp-reference-connector/rest/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp.its.umu.se/ewp-reference-connector/rest/omobilities/index</om1:index-url>
+                <om1:update-url>https://ewp.its.umu.se/ewp-reference-connector/rest/omobilities/update</om1:update-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types>
+                    <om1:approve-components-studied-draft-v1/>
+                    <om1:update-components-studied-v1/>
+                </om1:supported-update-types>
+            </om1:omobilities>
+            <ia2:iias version="2.0.1">
+                <ia2:get-url>https://ewp.its.umu.se/ewp-reference-connector/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp.its.umu.se/ewp-reference-connector/rest/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ikea.university.se</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="587233d1cf6da8e549348cec65110bccc477d46e1ae189c769fd5efaf5be816f"/>
+            <rsa-public-key sha-256="8715a17c6c58b4d10f81322c380bfad4c6f6601026220ea5181067397e3c7537"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8715a17c6c58b4d10f81322c380bfad4c6f6601026220ea5181067397e3c7537"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
+        <apis-implemented>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/courses</c1:url>
+                <c1:max-los-ids>1</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.0"
+            >
+                <omc1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <ia2:iias version="2.0.1">
+                <ia2:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imtc1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/imobilities/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>1</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <im1:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
+            >
+                <om1:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/omobilities/index</om1:index-url>
+                <om1:update-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/omobilities/update</om1:update-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types>
+                    <om1:approve-components-studied-draft-v1/>
+                    <om1:update-components-studied-v1/>
+                </om1:supported-update-types>
+            </om1:omobilities>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/echo</e2:url>
+            </e2:echo>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/imobilities/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/imobilities/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imc1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/courses/replication</cr1:url>
+                <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>false</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
+            </d4:discovery>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>pomodoro.university.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="1050445e3d9620a5c781769dbf5f8a131869a64d4bdfb62f453376a3f9c0c60a"/>
+            <rsa-public-key sha-256="93062eeeb084b4e91c28fa896921227a0b78eb6a93cb78a949200c9e864aca9b"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="93062eeeb084b4e91c28fa896921227a0b78eb6a93cb78a949200c9e864aca9b"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>oasis+ewp@dict.ugent.be</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://qas.ewp.ugent.be/secure-api/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://qas.ewp.ugent.be/secure-api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://qas.ewp.ugent.be/secure-api/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</om1:get-url>
+                <om1:index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</om1:index-url>
+                <om1:update-url>https://qas.ewp.ugent.be/secure-api/mobilities/update</om1:update-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.0"
+            >
+                <omc1:url>https://qas.ewp.ugent.be/secure-api/mobilities-cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ugent.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="af8bd81ba1c7e03bdd61cfd9ea259866a2c32117aa56958b3c54a3529450fbe0"/>
+            <rsa-public-key sha-256="00680e3df119f7af17674423d61742c08d1eb9e6959f9a0f20142250a655dd44"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="00680e3df119f7af17674423d61742c08d1eb9e6959f9a0f20142250a655dd44"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for University of Porto.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.up.pt/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.up.pt:8443/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.up.pt:8443/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.up.pt:8443/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>5</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>5</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp.up.pt:8443/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp.up.pt:8443/rest/iias/index</ia2:index-url>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:url>https://ewp.up.pt:8443/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp.up.pt:8443/rest/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp.up.pt:8443/rest/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>3</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:url>https://ewp.up.pt:8443/rest/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>3</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp.up.pt:8443/rest/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>3</im1:max-omobility-ids>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:url>https://ewp.up.pt:8443/rest/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>3</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp.up.pt:8443/rest/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp.up.pt:8443/rest/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imtc1:url>https://ewp.up.pt:8443/rest/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>3</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>up.pt</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="adb828268515c5919a02c5afc06b8c108baa99f15265c1f9e03b61a2a97fca86"/>
+            <rsa-public-key sha-256="f798c14146923e4e35c1bd6a62855df674bb854055dd0ef6180e2595db2dded9"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="f798c14146923e4e35c1bd6a62855df674bb854055dd0ef6180e2595db2dded9"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for Mobility Tool.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mt.ewp.up.pt:8433/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mt.ewp.up.pt:8433/rest/echo</e2:url>
+            </e2:echo>
+            <mt-institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mt.ewp.up.pt:8433/rest/institutions</url>
+                <max-ids>1</max-ids>
+            </mt-institutions>
+            <mt-dictionaries
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mt.ewp.up.pt:8433/rest/dictionaries</url>
+            </mt-dictionaries>
+            <mt-projects
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mt.ewp.up.pt:8433/rest/projects</url>
+            </mt-projects>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ec.europa.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="87def461e89fb029b5d043c869ce24969cb2a91b3332a44629c3e843a6a46e66"/>
+            <rsa-public-key sha-256="c3cbc9567684ca4bf44092ef153514f333ae1a213362c50664add23acee76ad5"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c3cbc9567684ca4bf44092ef153514f333ae1a213362c50664add23acee76ad5"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>matija.puzar@unit.no</ewp:admin-email>
+        <ewp:admin-notes>Manifest file for Norway.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://fsweb-demo.uio.no/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://fsweb-demo.uio.no/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://fsweb-demo.uio.no/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://fsweb-demo.uio.no/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.0.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://fsweb-demo.uio.no/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://fsweb-demo.uio.no/ewp/iias/index</ia2:index-url>
+            </ia2:iias>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://fsweb-demo.uio.no/ewp/courses</c1:url>
+                <c1:max-los-ids>1</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://fsweb-demo.uio.no/ewp/course-replication</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uio.no</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b350325bbe615f8fe15d656452de31930baacf2e87898afdb2ced94d2f05e0c4"/>
+            <rsa-public-key sha-256="2bb9dc9f8accfde1a1f87a0dc68178c540ab906ee0ab5814a4337ca585eff210"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="a859625706688a24778da061211f2c3565b4847e5c95a207c195556f89d7a1c6"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNICINECA test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://esse3beta4.esse3.pp.cineca.it/ewp/Manifest.do</d4:url>
+            </d4:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Courses.do</c1:url>
+                <c1:max-los-ids>10</c1:max-los-ids>
+                <c1:max-los-codes>10</c1:max-los-codes>
+            </c1:courses>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.14.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/MobilitiesGet.do</om1:get-url>
+                <om1:index-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/MobilitiesIndex.do</om1:index-url>
+                <om1:max-omobility-ids>10</om1:max-omobility-ids>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/MobilitiesCnr.do</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/IMobilitiesGet.do</im1:get-url>
+                <im1:max-omobility-ids>10</im1:max-omobility-ids>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/IMobilitiesCnr.do</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Tor.do</imt1:get-url>
+                <imt1:index-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/TorIndex.do</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+            </imt1:imobility-tors>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unisa.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="e0031175668abada3e90af1a15fadc464297ad5e0c0a767ae9e747e98cc54f17"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>ewp@it.auth.gr</ewp:admin-email>
+        <ewp:admin-notes>This is the manifest file of Aristotle University of Thessaloniki Greece.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://authewp.it.auth.gr/public-api/discovery/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://authewp.it.auth.gr/echo</e2:url>
+            </e2:echo>
+            <institutions
+                xmlns="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://authewp.it.auth.gr/institutions</url>
+                <max-hei-ids>1</max-hei-ids>
+            </institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>auth.gr</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="1994a5c11fab6a1e951587bebe76beacba4226d0137001d65d2a792896c1fd12"/>
+            <rsa-public-key sha-256="8a3e8f3c21f284c198d8b868b6d6ffddfe5169f2e269c9a4a43333b159b641e3"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8a3e8f3c21f284c198d8b868b6d6ffddfe5169f2e269c9a4a43333b159b641e3"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>lennert.vansever@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest maintained by the European University Foundation</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://unizone-evaserver.herokuapp.com/ewp/manifest.xml</d5:url>
+            </d5:discovery>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni.gl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="2f0e4824f8ba053e42407776556150f02ada58d205fb1690b81da66ddd76c1e4"/>
+            <rsa-public-key sha-256="73660d649e4521a3e609d9f59bc73bea0e82839b36955b05eb1341838698d134"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="73660d649e4521a3e609d9f59bc73bea0e82839b36955b05eb1341838698d134"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <d5:url>https://qsuewp-dev.moveon4.com/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <e2:url>https://qsucimsapi.staging.moveon4.com/ewpapi/echo</e2:url>
+            </e2:echo>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>upem-ewp.staging.moveon4.com</hei-id>
+            <hei-id>hsreutl-ewp.staging.moveon4.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="778d5f8c0ed991f125a1542ad0f60ea0986ed868bd6082186831c96f0ff8bb6f"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <in2:url>https://upem-ewp.staging.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <ou2:url>https://upem-ewp.staging.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>upem-ewp.staging.moveon4.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="778d5f8c0ed991f125a1542ad0f60ea0986ed868bd6082186831c96f0ff8bb6f"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <in2:url>https://hsreutl-ewp.staging.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <ou2:url>https://hsreutl-ewp.staging.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>hsreutl-ewp.staging.moveon4.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="778d5f8c0ed991f125a1542ad0f60ea0986ed868bd6082186831c96f0ff8bb6f"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>timw@terradotta.com</ewp:admin-email>
+        <ewp:admin-notes>Terradotta manifest</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
+            </d5:discovery>
+            <ia2:iias version="2.0.1">
+                <ia2:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>dev-agreements2.terradotta.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="72afec03c856694c5e80ac65fdb367d32dfb7f1a1123606c0071988d7c2de3a1"/>
+            <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>USOS-DAK@adm.uw.edu.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test.net.uw.edu.pl/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-test.net.uw.edu.pl/ewp/echo</e2:url>
+            </e2:echo>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp-test.net.uw.edu.pl/ewp/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp-test.net.uw.edu.pl/ewp/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-test.net.uw.edu.pl/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test.net.uw.edu.pl/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.0.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp-test.net.uw.edu.pl/ewp/iia/get</ia2:get-url>
+                <ia2:max-iia-ids>100</ia2:max-iia-ids>
+                <ia2:max-iia-codes>100</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-test.net.uw.edu.pl/ewp/iia/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp-test.net.uw.edu.pl/ewp/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.15.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp-test.net.uw.edu.pl/ewp/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp-test.net.uw.edu.pl/ewp/omobilities/index</om1:index-url>
+                <om1:update-url>https://ewp-test.net.uw.edu.pl/ewp/omobilities/update</om1:update-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+                <om1:supported-update-types/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp-test.net.uw.edu.pl/ewp/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://ewp-test.net.uw.edu.pl/ewp/courses</c1:url>
+                <c1:max-los-ids>100</c1:max-los-ids>
+                <c1:max-los-codes>100</c1:max-los-codes>
+            </c1:courses>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp-test.net.uw.edu.pl/ewp/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp-test.net.uw.edu.pl/ewp/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewp-test.net.uw.edu.pl/ewp/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uw.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="a0ef604ecdcca18a11e1e81d2b114540a06c72df09f464d31a47978141e30354"/>
+            <rsa-public-key sha-256="dad3c1d94f135242a13e27f974b2c63b8554fbc64fec3471c3a3846f1912742b"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="dad3c1d94f135242a13e27f974b2c63b8554fbc64fec3471c3a3846f1912742b"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.solenovo.fi/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <d4:discovery version="4.1.0">
+                <ewp:admin-email>erkko.ikonen@soleno.fi</ewp:admin-email>
+                <d4:url>https://ewp.solenovo.fi/ewp/rest/manifest</d4:url>
+            </d4:discovery>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>solenovo.fi</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="95d2c3b23a944c89e3504b9bb369f68b6c3eee22aac1b967a030501343c25158"/>
+            <rsa-public-key sha-256="6292ce006ac7f7e43d113c787bfbecda177bc23633019daf330c80261cee4bbf"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="6292ce006ac7f7e43d113c787bfbecda177bc23633019daf330c80261cee4bbf"/>
+        </server-credentials-in-use>
+    </host>
+    <institutions>
+        <hei id="auth.gr">
+            <other-id type="erasmus">G THESSAL01</other-id>
+            <other-id type="erasmus-charter">31579-EPP-1-2014-1-GR-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999895692</other-id>
+            <name xml:lang="el">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</name>
+            <name xml:lang="en">Aristotle University of Thessaloniki</name>
+        </hei>
+        <hei id="demo.sop.co.at">
+            <other-id type="erasmus">UK DEMO03</other-id>
+            <other-id type="euc">123456-IC-1-2012-1-UK-ERASMUS-EUC-1</other-id>
+            <name xml:lang="en">University of SOP</name>
+        </hei>
+        <hei id="demo.usos.edu.pl">
+            <other-id type="erasmus">PL WARSZAW01</other-id>
+            <other-id type="pic">999572294</other-id>
+            <name xml:lang="en">University of Warsaw</name>
+            <name xml:lang="pl">Uniwersytet Warszawski</name>
+        </hei>
+        <hei id="dev-agreements2.terradotta.com">
+            <other-id type="erasmus-charter">0c704227-e5cc-41f6-836c-45dbfaeb78fe</other-id>
+            <other-id type="pic">123456789</other-id>
+            <name xml:lang="en">Dev2 Instituion Name</name>
+        </hei>
+        <hei id="diak.fi">
+            <other-id type="erasmus">HELSINK19</other-id>
+            <other-id type="euc">29524-IC-1-2007-1-FI-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">947255635</other-id>
+            <name xml:lang="en">Diaconia University of Applied Sciences</name>
+        </hei>
+        <hei id="ec.europa.eu">
+            <name xml:lang="en">Mobility Tool+</name>
+        </hei>
+        <hei id="fh-dortmund.de">
+            <other-id type="erasmus">D  DORTMUN02</other-id>
+            <other-id type="euc">28737-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">986309678</other-id>
+            <name xml:lang="de">Fachhochschule Dortmund</name>
+            <name xml:lang="en">DORTMUND UNIVERSITY OF APPLIED SCIENCES AND ARTS</name>
+        </hei>
+        <hei id="fontys.edu">
+            <other-id type="erasmus">NL EINDHOV03</other-id>
+            <other-id type="pic">998501802</other-id>
+            <name xml:lang="en">Fontys University of Applied Sciences</name>
+        </hei>
+        <hei id="hei.demo.usos.edu.pl">
+            <other-id type="erasmus">PL WARSAW30</other-id>
+            <other-id type="pic">999642716</other-id>
+            <name xml:lang="en">Higher Education Institution</name>
+            <name xml:lang="pl">Higher Education Institution</name>
+        </hei>
+        <hei id="hei01.developers.erasmuswithoutpaper.eu">
+            <name>Artificial HEI for testing Echo APIs</name>
+        </hei>
+        <hei id="hei02.developers.erasmuswithoutpaper.eu">
+            <name>Artificial HEI for testing Echo APIs</name>
+        </hei>
+        <hei id="hogent.be">
+            <other-id type="erasmus">B  GENT25</other-id>
+            <other-id type="pic">998961291</other-id>
+            <name xml:lang="en">UNIVERSITY COLLEGE GHENT</name>
+            <name xml:lang="nl">Hogeschool Gent</name>
+        </hei>
+        <hei id="hsreutl-ewp.staging.moveon4.com">
+            <other-id type="erasmus">D  REUTLIN02</other-id>
+            <other-id type="euc">30269</other-id>
+            <other-id type="pic">989901879</other-id>
+            <name xml:lang="en">Hochschule Reutlingen</name>
+        </hei>
+        <hei id="htw-berlin.de">
+            <other-id type="erasmus">D  BERLIN14</other-id>
+            <other-id type="euc">28367-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">997713289</other-id>
+            <name xml:lang="de">Hochschule für Technik und Wirtschaft Berlin, HTW Berlin</name>
+        </hei>
+        <hei id="ikea.university.se">
+            <other-id type="erasmus">S Ikea01</other-id>
+            <other-id type="local">IK1234</other-id>
+            <name xml:lang="en">IKEA university</name>
+            <name xml:lang="sv">IKEA universitet</name>
+        </hei>
+        <hei id="jyu.fi">
+            <other-id type="erasmus">SF JYVASKY01</other-id>
+            <other-id type="euc">29549-IC-1-2007-1-FI-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">999842245</other-id>
+            <name xml:lang="en">UNIVERSITY OF JYVÄSKYLÄ</name>
+            <name xml:lang="fi">JYVÄSKYLÄN YLIOPISTO</name>
+        </hei>
+        <hei id="kea.dk">
+            <name xml:lang="da">KEA Copenhagen School of Design and Technology</name>
+        </hei>
+        <hei id="partner.sop.co.at">
+            <other-id type="erasmus">A DEMO01</other-id>
+            <name xml:lang="de">Universität - Partner</name>
+        </hei>
+        <hei id="ph-ooe.at">
+            <other-id type="erasmus">A  LINZ03</other-id>
+            <other-id type="euc">29268-IC-1-2002-1-AT-ERASMUS-EUC-1</other-id>
+            <other-id type="pic">949233853</other-id>
+            <name xml:lang="de">Pädagogische Hochschule OberÖ</name>
+        </hei>
+        <hei id="pomodoro.university.it">
+            <other-id type="euc">23654</other-id>
+            <other-id type="local">POMO22</other-id>
+            <name xml:lang="en">Pomodoro University</name>
+            <name xml:lang="sv">Pomodoro Universitet</name>
+        </hei>
+        <hei id="solenovo.fi">
+            <other-id type="erasmus">S Solenovo01</other-id>
+            <other-id type="local">SN1234</other-id>
+            <name xml:lang="en">Solenovo oy</name>
+            <name xml:lang="sv">Solenovo oy</name>
+        </hei>
+        <hei id="turkuamk.fi">
+            <other-id type="erasmus">SF TURKU05</other-id>
+            <other-id type="pic">948193431</other-id>
+            <name xml:lang="fi">TURKU UNIVERSITY OF APPLIED SCIENCES</name>
+        </hei>
+        <hei id="tut.fi">
+            <other-id type="erasmus">SF TAMPERE02</other-id>
+            <other-id type="euc">29530-IC-1-2007-1-FI-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">990343811</other-id>
+            <name xml:lang="en">TAMPEREEN TEKNILLINEN YLIOPISTO</name>
+        </hei>
+        <hei id="ub.edu">
+            <other-id type="erasmus">E  BARCELO01</other-id>
+            <other-id type="euc">28570-IC-1-2007-1-ES-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">999986387</other-id>
+            <name xml:lang="en">UNIVERSITY OF BARCELONA</name>
+            <name xml:lang="es">UNIVERSITAT DE BARCELONA</name>
+        </hei>
+        <hei id="uc3m.es">
+            <other-id type="erasmus">E MADRID14</other-id>
+            <other-id type="pic">999899572</other-id>
+            <name xml:lang="en">UNIVERSITY CARLOS III</name>
+            <name xml:lang="es">UNIVERSIDAD CARLOS III</name>
+        </hei>
+        <hei id="ugent.be">
+            <other-id type="erasmus">B  GENT01</other-id>
+            <other-id type="pic">999986096</other-id>
+            <name xml:lang="en">Ghent University</name>
+            <name xml:lang="nl">Universiteit Gent</name>
+        </hei>
+        <hei id="uio.no">
+            <other-id type="erasmus">N OSLO01</other-id>
+            <other-id type="pic">999975814</other-id>
+            <name xml:lang="en">University of Oslo</name>
+        </hei>
+        <hei id="uni-augsburg.de">
+            <other-id type="erasmus">D  AUGSBUR01</other-id>
+            <other-id type="euc">28403-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">999598678</other-id>
+            <name xml:lang="de">Universität Augsburg</name>
+        </hei>
+        <hei id="uni-bremen.de">
+            <other-id type="erasmus">D  BREMEN01</other-id>
+            <other-id type="pic">999987454</other-id>
+            <name xml:lang="de">UNIVERSITÄT BREMEN</name>
+            <name xml:lang="en">University of Bremen</name>
+        </hei>
+        <hei id="uni-kiel.de">
+            <other-id type="erasmus">D  KIEL01</other-id>
+            <other-id type="euc">28321-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">999839529</other-id>
+            <name xml:lang="de">Christian-Albrechts-Universität zu Kiel</name>
+            <name xml:lang="en">KIEL UNIVERSITY</name>
+        </hei>
+        <hei id="uni.gl">
+            <other-id type="erasmus">DK NUUK01</other-id>
+            <other-id type="pic">986305410</other-id>
+            <name xml:lang="da">Grønlands Universitet</name>
+            <name xml:lang="en">University of Greenland</name>
+            <name xml:lang="kl">Ilisimatusarfik</name>
+            <name xml:lang="nl">Universiteit van Groenland</name>
+        </hei>
+        <hei id="unisa.it">
+            <other-id type="erasmus">I SALERNO01</other-id>
+            <other-id type="pic">999899184</other-id>
+            <name xml:lang="en">University of CINECA</name>
+            <name xml:lang="it">Universita' degli Studi di CINECA</name>
+        </hei>
+        <hei id="up.pt">
+            <other-id type="erasmus">P PORTO02</other-id>
+            <other-id type="euc">29233-EPP-1-2014-1-PT-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999894916</other-id>
+            <name xml:lang="en">University of Porto</name>
+            <name xml:lang="pt">Universidade do Porto</name>
+        </hei>
+        <hei id="upem-ewp.staging.moveon4.com">
+            <name xml:lang="en">Université Paris-Est Marne-la-Vallée</name>
+        </hei>
+        <hei id="uta.fi">
+            <other-id type="erasmus">SF TAMPERE01</other-id>
+            <other-id type="pic">999903161</other-id>
+            <name xml:lang="fi">University of Tampere/Tampereen yliopisto</name>
+        </hei>
+        <hei id="uw.edu.pl">
+            <other-id type="erasmus">PL WARSZAW01</other-id>
+            <other-id type="pic">999572294</other-id>
+            <name xml:lang="en">University of Warsaw</name>
+            <name xml:lang="pl">Uniwersytet Warszawski</name>
+        </hei>
+    </institutions>
+    <binaries>
+        <rsa-public-key sha-256="00680e3df119f7af17674423d61742c08d1eb9e6959f9a0f20142250a655dd44">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgtNjWssgOprDYIlkKnf5XIbvHVwYEkL2
+            h01pzLjGnJlsai029ShumzDbf/uOVSzL3WC28GqRJve5jGiG7/gllcEKFDJ8XDO0lcH+ctc7Vj+R
+            udvSLkdxnnA82i9Sc6B8oGIY4C+DlFySobBx5+4eWDPL0MvpnvQ4dBvVdv+evl5Ah3/FdDolgdmp
+            lDgyQsoXxT6WT9JpuRJxvH0QMwOlpmNebc7BfwsSEyxzI4qFA/JnPinK24aCxh9OS4bZtpOyOify
+            n1/EaMrl2qT878cT+Mo8OT+Wec9DB3uH0OacMVxVqWVci0ANrMdABR8x+jRo6nAzptAIJBDvINKV
+            MqONcQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="1bb29154c18bd6feac90998dc22a13c1ebb8b6b8d9c9d2ffe72458c880ca8039">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkGarH+14e0sKdmo+nJTrGnqRvwpHfV92
+            942OOqsu664qBPnTAncLDfX7dfpgkU1NXWsGDaiuaQ+vsSJK1ZMr70Y5nU2qa2+rtlNjs5+mhD99
+            OfVKfJVlHDWP49ORPtd78zPoWIdAaxuq/Z4JfWqjJdMtWKkrzwJAZzZhXS+NON6ou/T3nPanoEOo
+            WzTz9Lt4kJOo4R+4VtQ50gZakPBKvi7kDdh0KBdigkU7I8lHIPcjns4BmXEs7AFwszyEx3QRocDM
+            m9bcY7Erf0mzU61n0Z9w3Y14r6qgQHzacvPOnEFEcqvHwNv8wSULBo0QmWfGjNr6ActNyiiTRIzD
+            uGe3awIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="2bb9dc9f8accfde1a1f87a0dc68178c540ab906ee0ab5814a4337ca585eff210">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz5EmO1EFiTipZAOneaTEIq52XCADubPz
+            kbraiKLGDjaZBn1KcVltdPF2wB186y4qWimVq9mjoIo2tv0bY1hfLvgV77SDIgpCHf7fHYw+UVUu
+            dgviQP8fi31CRTU2e4CTgGG5ZcBA1mqpYNN7nR7coF8sJmEqkBYy/5ubh58Bu+YjO8DQq5W4ZKn4
+            ALwJM01ocgb5ia1gs89waOLnjSZc2PkGTsrPN+qKjSxC2cYn92BWWziHmyyXgvitmDalvzdAi85Y
+            wuk+OzTK0x1jEHSSYI4+miYdtuCyF+O0UbveLrDETycZLyhGEYFL4N3V5rvuQqnimBPTfqDvceBi
+            sJO6qQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="32e5776456bec2be7d760080a802b4a37033f1771d5900f86c6b3e5e9c41f1ac">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAshtxX2hnr35zuuqmJc/cXRwxFVFU73N6
+            jiRI3bD3rM571APVx/SxHcGPHY0pgc9u1JwQmFPYVf3Qb5IUXJd6F0BsjTEbn76DCeT9D8rU5Af3
+            gm3Tl/agSG6JRogmUT3jJv04tq7rH+lb/kzUjf3mGomcz7Ujb0qC+QRNn7eZAN0aCAwEhAjhxODu
+            Kke9Oj/JY6A6Yn05nLavExu3rOEpUX5wi49EDmicT12kMOKqrLlkbmY1ZloD8gVhr2e3RpamX/Tv
+            MgEsr+KJCzRJJzW/xaKfQ8gkx0zru3RfijFK5yJ4IoCj2WtdCShGNWrG31PRwwEhsCpeTkaDnF7V
+            Hv0tVQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAynERNFtFxKd6Brvq7xlb+pojcCu+YAWU
+            Q8pZNBf5Q1qJWPZisQzeEDT3xj8ibPwVVSC4Ikv9mKg6OUlMicjDoSVeEfVuyDvQ3LipxCYtGlaD
+            fsp+yPS1fkLB9Ah53dFnBhbKFAWr7IgYalXr30QPNI27Cy4nh37zDtT8BgOolVwp9vPhb9H9uFJU
+            Fx5XwegihmMHWPh9Gn/jbBlA9ig/OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkE
+            sDbc7jvUDiZ3sa6i5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ
+            +mNQsQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="6292ce006ac7f7e43d113c787bfbecda177bc23633019daf330c80261cee4bbf">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmVzkz73CkkLloeHYymF+/9hCIIZghfjh
+            3CrUs9YFPazpg2/xWz6EI0N82BVTiEaqIcXKYU0VJNqZtHgPFKktEviSsarRj4//Lh46h2scFdtv
+            OJ5d4OfRPvXJSjFRe4+0sbkABqWc8r06gF/R9/6jpRCXP7Ki+b7EWlqcK66XwEFWLEUxcKjaBxlT
+            NgBJQobquYpns6ZGnGOTBG026vXQdNWmAovoo3RB+Ei/5b33Cc8yOnwABZx/7Fa6nWLdoy1TsWY4
+            hCB/oHcA6jfG+BX4a6aRmcSqMZ2OfafJdnIO3W1Bm33iBJzczEG7aanHwZiWzuXFZkNYFCalI+3J
+            tJzKBQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="6a4f57df7f4d2cc6684570e09be16a1ca67975205ff77063162a6976b51c6c95">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvHXcgC9zGDG4HRugXolUmLRdMjYo7R6t
+            sNddaRONfVRNxkZztF/6c4/VGpi2wXG5gHTdVN2BDJ9jS2jZjJGAwGuRSv6KeMISxsMTdfG2Mb+5
+            bzv/tqxPsToszlD6Crv0j5RG6zzf1PvFCXdkcNOZn7s209HJHiiFGkSD6ZktRBtc4hOeF59t/Cep
+            Q9Z9MWhmmbF54S1djiXpeHaJ/6NjWdFa3QIDZD8LSJRT78w/IrUyALF7mfuHZvs0Se5DW6/nHjna
+            Z+glpuzZ4t3/opy5YlRrR/oVRp8n7OcNJyWq2mjdWJ0zhSCl4x6XxKDZ4UFMUTV3yf1YlSawFohJ
+            rpVe7wIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="73660d649e4521a3e609d9f59bc73bea0e82839b36955b05eb1341838698d134">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxEksDXxjd4oKL/pdgApVXEEDXCQfAP43
+            vfyFL8YZFVBsVfFA+FNFD9zESS/adyw8p1vdTfapz0Wwkqxzj7j4Pl9POVuu9QhA6ZhkATLZWMEX
+            9T5f5E7LruVxr5ST9ksXyNi57bAeRvBRrwMI1pQ5+MoZvbi9i8/575iwu6dLg+y9WAcGG/F+xwSm
+            pjOERQ25gj5nO+q6tCKFxyPHk14vpEQpSbUpH80+q1Sw9M8L9C+wqEpTdvdoOWppBickveuWP/JN
+            /aMXo4Ksy4CTd/vl3pkzFy60MedgLRKIQ2rPljOJFz6Rl/CPQl7fHPm9ZCgOZ7kDqKnMOzttNwVP
+            cBu9wwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxy4PBPNsKRJHn9+rESq+pqzRpj+QB6RD
+            wmuSR6gkWlSqkv1dEqlya8thIqEUJwmc9ZgZmiQ0MB+s0xkAElz//a8EX2n3y6jlvAt+bouvhVMa
+            9zq0SyZORlCxBQ4rvMJNQ3sBAhP1GzuwRxkJsA5xWak86IC1NQ/eJnxq5YUd4L78bMOIcZL6ekvc
+            YD9efrKcnIEEwbFdFFTwU0vnpwI3o4DAhW4A11wgR0CRvrnGU0utY369Om41BlYZnKEjLDw21ilk
+            ClCsH0zaGWAtynyHNJ7eNOL5JCZtULgdrlKP3FOwt3SEqRKMtOlv82dNgKrcp88ueEVMIvnWjqSu
+            Vhm1ywIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9d7aS0S3lStfaiJnmr1vkPjL+wP1Bs6c
+            fN/Gbm1nwG4N/cvxYd6NshooCIWVJXMNRr/KKBZPSB7j6AhU1KFlKJnSNGcVc5bbV2wNEp3keBJ1
+            Z0L0JEhaOdROw2yIFD8z/x2J989H6QhI8B+4y6Y59RGCY6C7Wbn02/kPoV3WoiDpndMNBTSk0keB
+            Ikh2HcW5slcLwRihGZzQA1UccqBNuuCVY7a1XY/C84qNcmRwcZzzHfqJyMVp/V3eoxeT7ZMYp3Fh
+            IdXSQjcBL5LQXMbg7OpCVgSn+tQYO/gCnUcPEbNnChH3Y9rWBGIijkc2A2itvVjjL6ey+4vfbRdi
+            l6EzpwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8715a17c6c58b4d10f81322c380bfad4c6f6601026220ea5181067397e3c7537">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwSqFm9bDmn2RWs/zeTqr57z0sxfp533H
+            t1nrgAPpedUP8fcFX0FNLBPZ+lyFNV//GN+9cfRVyhBcVQFuK0sz9SPOYa5ZV989q7fzXpIga/6y
+            JryoA3Bnq048DHkgm3sfBl3rGezZOtiJ6/huAyGoG8QT5U5MT7HF2pCM6yWsbrB4fAUpLrXeL/uP
+            eZ7fulDg9EC8clblE4wrrY+0qBDPvZkyWQpIfiuXNj32/U6PjtVQV7lqDW4+3BcdXBOaG56etZNx
+            0DDNmLVXkNIzqFAHKaIxOl736YIJvvGwDxuDEBAIICqBOHF9Bm5vtKA+jRIjVYaW90/zVhhqGycF
+            mTmSFwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8a3e8f3c21f284c198d8b868b6d6ffddfe5169f2e269c9a4a43333b159b641e3">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwT8pZ2VGho2gR3tyIldChZXa7zurfUut
+            jjbSsZV9QZy1qRWHzt0NcH6QTnIqS7aNeeORdoMwrepIkvO6YPjlbRQJeZY5tuCDHtjqFlg9rsvM
+            8eGBygouXiSy65BB21BSXFNXc5Zcb7OjPawCnlD6IIZ9mDKVGs6hwXCZ5A/FbZM6yuBcwgVMMMlS
+            VQtl9+TNUtc3/A3d+SZCn5N5TtRTQT22a7ECOsg9UOhaMJ/1o1oZlEEvOnHTkKbzFw5UQXc3vBv2
+            hK/GTTFOHd55Y78J+saHIDFECN+IJnRMHhIOOOujzyWk52UXaAtdvHeGI/M3aaSz+AiF2vs1GMVG
+            VtLSEwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="93062eeeb084b4e91c28fa896921227a0b78eb6a93cb78a949200c9e864aca9b">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy2YIQ9NAfK8fGuHYADiuH9jqBSaR4HWv
+            hJSbAFVK9UAItNBWeXFfZ5kbgVoJqwGyYyV3/iFPjFcRZFrB4z+GjeH5F8+4jrMOrSyJZwCYYNKd
+            xTyDO2LWdIwkDT0ZdkGl15VXe2mIPWyRQUePFrq6l8lGmc8SD/XgP277IO/eH51xujezpCurKD5n
+            iCKfPR2fY7NF31R8N3Xc9rpQcxRr3m9fz4RhcrcAvVSmzxwCzAqIECz5E9aWjCK1klfEy6FHjMx9
+            A3ew2Vczs+14ERvjLAeIrAJ4dc3BJFbR0jhcN9Y+qIMQ8F9P3ODq8/ZyHlXp5RUprNTuJHqBqhPU
+            qyVIswIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="a859625706688a24778da061211f2c3565b4847e5c95a207c195556f89d7a1c6">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0R/Ikx+1bfIpcy0LuBCbLz591TOdcbhq
+            0fNH/zgdJFHy3gsa7uyhEZ4hOl0CQakXvFc1XKMgwJalxMNnrsqTw+5OVSqKQVVFL7NLORjEqCit
+            bxJBtQmkoY1e2xj4OEKtCjie1xHlGMDsBiJJx24bX/hkAX7hTmq797Pen+rwGfh0uNg/IeJGoqpw
+      

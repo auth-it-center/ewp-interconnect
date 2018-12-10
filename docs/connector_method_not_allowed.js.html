@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: connector/method_not_allowed.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: connector/method_not_allowed.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @file In this file is written the handler for the incoming requests that use inappropriate method. It contains  the function:
+* 1. method_not_allowed : The use of this function is used to create the response to the methods that are not allowed.
+*/
+const httpSignature = require('http-signature');
+const fs = require('fs');
+const crypto = require('crypto');
+const respond_helper = require('./helpers/respond_helper.js');
+const server_priv = fs.readFileSync(process.env.SERVER_RSA_PRIVATE_KEY_PATH, 'utf8');
+const server_pub = fs.readFileSync(process.env.SERVER_RSA_PUBLIC_KEY_PATH,'utf8');
+const server_pub_rsa_hash = process.env.SERVER_RSA_PUBLIC_KEY_HASH;
+
+/**
+* @description The use of this function is used to create the response to the methods that are not allowed.
+* @param {Object} req The request object.
+* @param {Object} res The response object.
+* @async
+*/
+async function method_not_allowed(req, res){
+
+	res.statusCode = 405;
+	res.statusMessage = 'Method Not Allowed';
+
+	const not_allowed_response =
+	`&lt;?xml version="1.0" encoding="utf-8"?>
+	&lt;error-response
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+	xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd schema.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	&lt;developer-message
+	xsi:type="MultilineStringWithOptionalLang"
+	xml:lang="en-GB">
+	Method Not Allowed
+	&lt;/developer-message>
+	&lt;user-message
+	xml:lang="en-GB">
+	Method Not Allowed
+	&lt;/user-message>
+	&lt;/error-response>`;
+
+	var headers = [];
+
+	//Create date header
+	var date = (new Date()).toUTCString();
+	res.setHeader('date', date);
+	headers.push('date');
+
+	respond_helper.create_digest_header(headers,not_allowed_response,res);
+	if (req.headers['authorization'] != null){
+		//extract request signature from authorization header and return it in 'x-request-signature'
+		var auth_header = req.headers['authorization'];
+		respond_helper.create_x_request_sign_header(auth_header,headers,res);
+	}
+
+	//Create x-request-id header
+	if (req.headers['x-request-id'] != null) {
+		res.setHeader('x-request-id',req.headers['x-request-id']);
+		headers.push('x-request-id');
+	}
+
+	//if 'accept-signature' header has 'rsa-sha256', sign the response
+	if (req.headers['accept-signature'] != null &amp;&amp; req.headers['accept-signature'].search('rsa-sha256') != -1) {
+		httpSignature.sign(res, {
+			key:  server_priv,
+			keyId: server_pub_rsa_hash,
+			headers: headers
+		});
+		res.setHeader('signature', res.getHeader('authorization').substring(10));
+		res.removeHeader('authorization');
+	}
+	res.write(not_allowed_response);
+	res.end();
+}
+
+exports.method_not_allowed = method_not_allowed
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#authenticate">authenticate</a></li><li><a href="global.html#catalogue_exists">catalogue_exists</a></li><li><a href="global.html#cert_hash_exist">cert_hash_exist</a></li><li><a href="global.html#clear_db">clear_db</a></li><li><a href="global.html#create_backup">create_backup</a></li><li><a href="global.html#create_digest_header">create_digest_header</a></li><li><a href="global.html#create_logger">create_logger</a></li><li><a href="global.html#create_x_request_sign_header">create_x_request_sign_header</a></li><li><a href="global.html#createDB">createDB</a></li><li><a href="global.html#discovery_get">discovery_get</a></li><li><a href="global.html#echo_get">echo_get</a></li><li><a href="global.html#echo_post">echo_post</a></li><li><a href="global.html#get_catalogue">get_catalogue</a></li><li><a href="global.html#get_from_backup">get_from_backup</a></li><li><a href="global.html#get_heis_from_cert_hash">get_heis_from_cert_hash</a></li><li><a href="global.html#get_heis_from_rsa_hash">get_heis_from_rsa_hash</a></li><li><a href="global.html#get_keyid_from_header">get_keyid_from_header</a></li><li><a href="global.html#get_rsa_key_from_hash">get_rsa_key_from_hash</a></li><li><a href="global.html#init_db">init_db</a></li><li><a href="global.html#insert_request_id">insert_request_id</a></li><li><a href="global.html#institutions_get">institutions_get</a></li><li><a href="global.html#institutions_post">institutions_post</a></li><li><a href="global.html#method_not_allowed">method_not_allowed</a></li><li><a href="global.html#request_id_exist">request_id_exist</a></li><li><a href="global.html#respond">respond</a></li><li><a href="global.html#rsa_hash_exist">rsa_hash_exist</a></li><li><a href="global.html#sha_256_digest">sha_256_digest</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 10 2018 18:25:06 GMT+0200 (Eastern European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

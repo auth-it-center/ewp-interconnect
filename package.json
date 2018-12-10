@@ -1,0 +1,31 @@
+{
+  "name": "ewp-interconnect",
+  "version": "1.0.0",
+  "description": "The implementation of the Erasmus Without Paper interconnector of the Aristotle University of Thessaloniki.",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "connect-http-signature": "^0.1.3",
+    "dotenv": "^6.2.0",
+    "express": "4.x",
+    "http-signature": "^1.2.0",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.10",
+    "simple-node-logger": "^0.93.40",
+    "uuidv4": "^2.0.0",
+    "xml-js": "^1.6.8"
+  },
+  "scripts": {
+    "start": "sudo nodemon -r dotenv/config app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth-it-center/ewp-interconnect"
+  },
+  "authors": ["Stratigakis Iakovos","Besinas Argyrios"],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/auth-it-center/ewp-interconnect/issues"
+  },
+  "homepage": "https://github.com/auth-it-center/ewp-interconnect#readme"
+}
