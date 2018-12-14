@@ -20,7 +20,7 @@ This is the implementation for the discovery, echo and institutions APIs, of the
     simple-node-logger: v0.93.40
     uuidv4: v2.0.0
     xml-js: v1.6.8
-    
+
 The above are  the node modules used in the project.
 
 ### Specifications
@@ -36,7 +36,7 @@ The specifications of the insitutions API are descibed [here](https://github.com
 ```
 git clone https://github.com/auth-it-center/ewp-interconnect.git
 ```
-2. Navigate to the created folder. 
+2. Navigate to the created folder.
 3. To install the dependencies, run :
 ```
 npm install
@@ -47,10 +47,10 @@ npm install
     - the filepaths to your own private and public rsa keys (SERVER_RSA_PRIVATE_KEY_PATH, SERVER_RSA_PUBLIC_KEY_PATH)
     - the sha256 of your rsa public key (SERVER_RSA_PUBLIC_KEY_HASH)
     - the urls of the apis (DISCOVERY_URL, ECHO_URL, INSTITUTIONS_URL)
-    - the paths to the xml files for your discovery and institutions apis (DISCOVERY_MANIFEST, ISTITUTIONS_XML)
+    - the paths to the xml files for your discovery and institutions apis (DISCOVERY_MANIFEST, INSTITUTIONS_XML)
     - the absolute path to a folder to keep a backup of the registry catalogue (CATALOGUE_FOLDER)
     - the path to a folder to keep log files (LOGS_FOLDER)
-    
+
 ## Running the project:
 Start the app with:
 ```
@@ -66,7 +66,7 @@ The project documentaion can be found [here]( https://auth-it-center.github.io/e
 ## Built With
 
 * [NodeJS](https://nodejs.org/en/) - Runtime Engine
-* [ExpressJS](https://expressjs.com/) - Framework 
+* [ExpressJS](https://expressjs.com/) - Framework
 * [NPM](https://www.npmjs.com/) - Package Manager
 * [MongoDB](https://www.mongodb.com/) - Database
 

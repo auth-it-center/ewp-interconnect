@@ -21,7 +21,7 @@ var auth = require('./../../connector/auth.js');
  			var query = url.parse(req.url).query.split('=');
  			if (query[0] == 'hei_id') {
  				if (query[1] == 'auth.gr') {
- 					var res_body = fs.readFileSync(process.env.ISTITUTIONS_XML, 'utf8');
+ 					var res_body = fs.readFileSync(process.env.INSTITUTIONS_XML, 'utf8');
  				}
  			}
  			else {
@@ -60,7 +60,7 @@ var auth = require('./../../connector/auth.js');
  				var query = url.parse(req.url).query.split('=');
  				if (query[0] == 'hei_id') {
  					if (query[1] == 'auth.gr') {
- 						var res_body = fs.readFileSync(process.env.ISTITUTIONS_XML, 'utf8');
+ 						var res_body = fs.readFileSync(process.env.INSTITUTIONS_XML, 'utf8');
  					}
  				}
  				else {
