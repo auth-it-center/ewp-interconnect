@@ -17,6 +17,7 @@ This is the implementation for the discovery, echo and institutions APIs, of the
     http-signature: v1.2.0
     moment: v2.22.2
     mongodb: v3.1.10
+    nodemon: 1.18.8
     simple-node-logger: v0.93.40
     uuidv4: v2.0.0
     xml-js: v1.6.8
