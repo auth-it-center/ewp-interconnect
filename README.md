@@ -53,7 +53,7 @@ npm install
     - the path to a folder to keep log files (LOGS_FOLDER)
 
 ## Running the project:
-Start the app with:
+Start the MongoDB daemon and then run the app with:
 ```
 npm start
 ```
